@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>VIVA ROSE · Roses éternelles au Maroc</title>
+<meta name="description" content="Roses naturelles stabilisées, composées à la main et livrées en J+1 à Casablanca, Rabat, Marrakech, Tanger, Fès et Agadir.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Jost:wght@300;400;500;600&display=swap">
+<style>
+:root{color-scheme:light;box-sizing:border-box}
+body{margin:0;padding:0}
+img{max-width:100%}
+[hidden]:not([hidden=until-found i]){display:none!important}
+:root{
+  --bg:#f7f5f2; --surface:#ffffff; --ink:#1f1a1c; --muted:#6e6467; --line:#e4dedb;
+  --stem:#1e3a2f; --stem-ink:#f4efe9; --rose:#b3123b; --rose-soft:#f6e3e7; --gold:#b48a3c;
+  --display:"Bodoni Moda", "Didot", "Times New Roman", serif;
+  --body:"Jost", "Helvetica Neue", Arial, sans-serif;
+  --r:14px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141113; --surface:#1d191b; --ink:#f2ecea; --muted:#a69a9d; --line:#332c2f;
+  --stem:#0f241c; --stem-ink:#efe8e1; --rose:#ef5b7e; --rose-soft:#3a1d25; --gold:#d3aa5e; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141113; --surface:#1d191b; --ink:#f2ecea; --muted:#a69a9d; --line:#332c2f;
+  --stem:#0f241c; --stem-ink:#efe8e1; --rose:#ef5b7e; --rose-soft:#3a1d25; --gold:#d3aa5e; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;font-weight:400}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;line-height:1.1}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--rose);outline-offset:2px}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+
+/* header */
+.topbar{background:var(--stem);color:var(--stem-ink);font-size:13px;text-align:center}
+.topbar .wrap{padding-block:8px}
+header.site{position:sticky;top:0;z-index:9;background:var(--bg);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.logo{font-family:var(--display);font-size:26px;letter-spacing:.14em;color:var(--ink);text-decoration:none;white-space:nowrap}
+.logo span{color:var(--rose)}
+nav.main{display:flex;gap:22px;font-size:14px}
+nav.main a{color:var(--ink);text-decoration:none}
+nav.main a:hover{color:var(--rose)}
+.cart-btn{display:flex;align-items:center;gap:8px;background:var(--ink);color:var(--bg);border:0;border-radius:999px;padding:9px 16px;font-size:14px}
+.cart-btn b{background:var(--rose);color:#fff;border-radius:999px;min-width:22px;height:22px;display:inline-grid;place-items:center;font-size:12px}
+@media (max-width:760px){nav.main{display:none}}
+
+/* hero */
+.hero{background:var(--stem);color:var(--stem-ink)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding-block:56px 40px}
+.hero h1{font-size:clamp(40px,7vw,84px);letter-spacing:-.01em}
+.hero h1 em{color:#f0a3b6;font-style:italic}
+.hero p{max-width:46ch;opacity:.86;font-size:18px;font-weight:300;margin:18px 0 26px}
+.hero .art{max-width:380px;justify-self:center;width:100%}
+.btn{border:0;border-radius:999px;padding:13px 24px;font-size:15px;font-weight:500}
+.btn-rose{background:var(--rose);color:#fff}
+.btn-line{background:transparent;color:inherit;border:1px solid currentColor}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:32px;font-size:13px;opacity:.8}
+.facts strong{display:block;font-family:var(--display);font-size:26px;font-weight:400;opacity:1}
+@media (max-width:760px){.hero .wrap{grid-template-columns:1fr;padding-block:36px}.hero .art{max-width:260px;order:-1}}
+
+/* delivery bar */
+.deliver{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);margin-top:-22px;position:relative;display:grid;grid-template-columns:1fr 1fr auto;gap:12px;padding:14px;align-items:end}
+.deliver label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+select,input,textarea{font:inherit;font-size:15px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;width:100%}
+.deliver .ok{font-size:14px;color:var(--stem);align-self:center}
+:root[data-theme="dark"] .deliver .ok{color:#8fc7a9}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .deliver .ok{color:#8fc7a9}}
+@media (max-width:640px){.deliver{grid-template-columns:1fr 1fr}.deliver .ok{grid-column:1/-1}}
+
+/* shop */
+section{padding-block:64px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.sec-head h2{font-size:clamp(30px,4.5vw,46px)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:14px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.swatch{width:12px;height:12px;border-radius:50%;display:inline-block;vertical-align:-1px;margin-right:6px;border:1px solid rgba(0,0,0,.15)}
+.filters{margin-bottom:26px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;cursor:pointer;text-align:left;padding:0;color:inherit}
+.card:hover .pic svg{transform:scale(1.04)}
+.pic{background:var(--rose-soft);aspect-ratio:4/4.4;display:grid;place-items:center;position:relative;max-width:100%}
+.pic svg{width:78%;transition:transform .5s ease}
+.badge{position:absolute;top:12px;left:12px;background:var(--surface);color:var(--ink);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:4px 9px;border-radius:999px}
+.card .info{padding:14px 16px 16px;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.card h3{font-size:22px}
+.card .sub{font-size:13px;color:var(--muted)}
+.price{font-variant-numeric:tabular-nums;font-weight:500;white-space:nowrap}
+.empty{padding:40px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:var(--r)}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s}
+.step{border-top:1px solid var(--ink);padding-top:14px}
+.step::before{counter-increment:s;content:"Étape " counter(s);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--rose)}
+.step h3{font-size:22px;margin:8px 0 6px}
+.step p{margin:0;color:var(--muted);font-size:15px}
+@media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}}
+
+.promise{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.promise div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.promise b{display:block;font-family:var(--display);font-weight:400;font-size:20px;margin-bottom:4px}
+.promise span{font-size:14px;color:var(--muted)}
+@media (max-width:860px){.promise{grid-template-columns:1fr 1fr}}
+
+.care{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.care ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.care li{display:flex;gap:12px;align-items:baseline}
+.care li i{font-style:normal;color:var(--rose);font-family:var(--display)}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+summary{cursor:pointer;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--rose);font-size:20px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:8px 0 0;color:var(--muted)}
+@media (max-width:760px){.care{grid-template-columns:1fr;gap:24px}}
+
+footer{margin-top:80px;background:var(--stem);color:var(--stem-ink);font-size:14px}
+footer .wrap{padding-block:40px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}
+footer h4{font-weight:500;margin:0 0 8px;letter-spacing:.1em;text-transform:uppercase;font-size:12px;opacity:.7}
+footer p{margin:0;opacity:.85}
+@media (max-width:640px){footer .wrap{grid-template-columns:1fr}}
+
+/* overlays */
+.scrim{position:fixed;inset:0;background:rgba(15,10,12,.5);z-index:20}
+.modal{position:fixed;z-index:21;left:50%;top:50%;transform:translate(-50%,-50%);width:min(860px,calc(100% - 24px));max-height:calc(100% - 40px);overflow:auto;background:var(--surface);border-radius:18px;display:grid;grid-template-columns:1fr 1fr}
+.modal .pic{aspect-ratio:auto;min-height:300px}
+.modal .body{padding:26px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.modal h2{font-size:38px}
+.modal .desc{color:var(--muted);margin:0}
+.x{position:absolute;top:10px;right:10px;background:var(--surface);color:var(--ink);border:1px solid var(--line);width:36px;height:36px;border-radius:50%;z-index:2}
+.qty{display:flex;align-items:center;gap:10px}
+.qty button{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.count{font-size:12px;color:var(--muted);text-align:right}
+@media (max-width:700px){.modal{grid-template-columns:1fr;top:auto;bottom:0;left:0;transform:none;width:100%;border-radius:18px 18px 0 0;max-height:92%;padding-bottom:env(safe-area-inset-bottom,0px)}.modal .pic{min-height:220px}}
+
+.drawer{position:fixed;z-index:21;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--surface);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);padding-right:env(safe-area-inset-right,0px)}
+.drawer header{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}
+.drawer h2{font-size:28px}
+.lines{flex:1;overflow:auto;padding:8px 20px;display:flex;flex-direction:column}
+.line{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.line .mini{background:var(--rose-soft);border-radius:10px;display:grid;place-items:center;aspect-ratio:1}
+.line .mini svg{width:80%}
+.line small{display:block;color:var(--muted);font-size:12px;overflow-wrap:anywhere}
+.line button{background:none;border:0;color:var(--muted);font-size:12px;text-decoration:underline;padding:0}
+.totals{padding:16px 20px;border-top:1px solid var(--line);display:grid;gap:6px;font-variant-numeric:tabular-nums}
+.totals div{display:flex;justify-content:space-between}
+.totals .grand{font-size:18px;font-weight:600}
+.totals .btn{margin-top:8px;width:100%}
+.note{font-size:13px;color:var(--muted)}
+form.co{display:grid;gap:10px;padding:16px 20px}
+form.co label{font-size:13px;color:var(--muted);display:grid;gap:4px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">Livraison offerte dès 1 500 MAD · Commandez avant 14 h pour une livraison le lendemain</div></div>
+
+<header class="site"><div class="wrap">
+  <a class="logo" href="#boutique">VIVA <span>ROSE</span></a>
+  <nav class="main" aria-label="Navigation">
+    <a href="#boutique">Boutique</a><a href="#savoir-faire">Savoir-faire</a><a href="#entretien">Entretien</a><a href="#faq">Questions</a>
+  </nav>
+  <button class="cart-btn" id="openCart" type="button">Panier <b id="cartCount">0</b></button>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div>
+    <p class="eyebrow" style="color:inherit;opacity:.7">Roses éternelles · Maroc</p>
+    <h1>Des roses qui <em>restent</em>.</h1>
+    <p>Des roses naturelles, stabilisées à leur plus belle floraison et composées à la main. Elles gardent leur couleur une année entière, sans eau et sans entretien.</p>
+    <div class="ctas"><a class="btn btn-rose" href="#boutique" style="text-decoration:none">Voir les compositions</a><a class="btn btn-line" href="#savoir-faire" style="text-decoration:none">Comment ça marche</a></div>
+    <div class="facts"><div><strong>12 mois</strong>de tenue en moyenne</div><div><strong>100 %</strong>roses naturelles</div><div><strong>J+1</strong>dans 6 villes</div></div>
+  </div>
+  <div class="art" id="heroArt"></div>
+</div></div>
+
+<div class="wrap">
+  <div class="deliver">
+    <label for="city">Ville de livraison
+      <select id="city"><option>Casablanca</option><option>Rabat</option><option>Marrakech</option><option>Tanger</option><option>Fès</option><option>Agadir</option></select>
+    </label>
+    <label for="date">Date souhaitée<input type="date" id="date"></label>
+    <div class="ok" id="okMsg"></div>
+  </div>
+</div>
+
+<section id="boutique"><div class="wrap">
+  <div class="sec-head"><div><p class="eyebrow">La collection</p><h2>Nos compositions</h2></div><p class="note" id="resultCount"></p></div>
+  <div class="filters">
+    <div class="chips" id="occChips" role="group" aria-label="Occasion"></div>
+    <div class="chips" id="colChips" role="group" aria-label="Couleur"></div>
+  </div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="savoir-faire"><div class="wrap">
+  <div class="sec-head"><div><p class="eyebrow">Savoir-faire</p><h2>De la serre à votre salon</h2></div></div>
+  <div class="steps">
+    <div class="step"><h3>La cueillette</h3><p>Les roses sont coupées au moment où la fleur s'ouvre, quand le pétale est le plus dense.</p></div>
+    <div class="step"><h3>La stabilisation</h3><p>La sève est remplacée par une solution végétale. La rose garde sa souplesse et sa forme.</p></div>
+    <div class="step"><h3>La composition</h3><p>Chaque bouquet est monté à la main dans son vase ou sa boîte, en dôme serré.</p></div>
+    <div class="step"><h3>La livraison</h3><p>Emballée dans son coffret, avec votre carte imprimée, puis livrée à la date choisie.</p></div>
+  </div>
+  <div class="promise" style="margin-top:40px">
+    <div><b>Livraison J+1</b><span>Casablanca, Rabat, Marrakech, Tanger, Fès et Agadir.</span></div>
+    <div><b>Carte offerte</b><span>Votre message imprimé et glissé dans le coffret.</span></div>
+    <div><b>Photo avant envoi</b><span>Vous recevez une photo de votre composition.</span></div>
+    <div><b>Coffret cadeau</b><span>Chaque création voyage protégée dans sa boîte.</span></div>
+  </div>
+</div></section>
+
+<section id="entretien"><div class="wrap care">
+  <div><p class="eyebrow">Entretien</p><h2 style="font-size:clamp(30px,4.5vw,46px)">Presque rien à faire</h2><p class="note" style="font-size:16px;max-width:44ch;margin-top:14px">Une rose stabilisée n'a besoin ni d'eau ni de lumière. Quelques gestes simples suffisent à la garder belle plus longtemps.</p></div>
+  <ul>
+    <li><i>i.</i><span>Placez-la loin du soleil direct, qui pâlit les couleurs.</span></li>
+    <li><i>ii.</i><span>Évitez les pièces humides comme la salle de bain.</span></li>
+    <li><i>iii.</i><span>Ne l'arrosez jamais et ne la vaporisez pas.</span></li>
+    <li><i>iv.</i><span>Dépoussiérez avec un pinceau doux ou un souffle d'air froid.</span></li>
+  </ul>
+</div></section>
+
+<section id="faq"><div class="wrap" style="max-width:820px">
+  <p class="eyebrow">Questions fréquentes</p><h2 style="font-size:clamp(30px,4.5vw,46px);margin-bottom:16px">Vous vous demandez…</h2>
+  <details><summary>Ce sont de vraies roses ?</summary><p>Oui. Ce sont des roses naturelles cultivées en serre, puis stabilisées. Ni plastique, ni tissu.</p></details>
+  <details><summary>Combien de temps durent-elles ?</summary><p>Environ un an dans de bonnes conditions, souvent davantage pour les roses sous boîte en verre.</p></details>
+  <details><summary>Puis-je choisir la date de livraison ?</summary><p>Oui, à partir du lendemain de votre commande si vous commandez avant 14 h.</p></details>
+  <details><summary>Les roses conviennent-elles aux personnes allergiques ?</summary><p>La stabilisation retire l'humidité et la plupart du pollen, ce qui les rend mieux tolérées que des fleurs fraîches.</p></details>
+</div></section>
+
+<footer><div class="wrap">
+  <div><div class="logo" style="color:inherit">VIVA <span>ROSE</span></div><p style="margin-top:10px;max-width:40ch">Roses éternelles composées à la main, livrées partout au Maroc.</p></div>
+  <div><h4>Contact</h4><p>[Votre téléphone]<br>[Votre e-mail]<br>[Votre adresse]</p></div>
+  <div><h4>Infos</h4><p>Livraison et retours<br>Conditions générales<br>Confidentialité</p></div>
+</div></footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Panier" hidden></aside>
+
+<script>
+const COLORS={
+  rouge:{label:"Rouge",c:["#b3123b","#9c0f33","#c81d48"],sw:"#b3123b"},
+  rose:{label:"Rose",c:["#e98aa4","#d96d8b","#f2a7bb"],sw:"#e98aa4"},
+  blanc:{label:"Blanc",c:["#f5efe6","#ece4d6","#fbf8f2"],sw:"#f5efe6"},
+  pastel:{label:"Pastel",c:["#f3c9cf","#f6dcc4","#ddd0ec","#fbf3ea"],sw:"#f3c9cf"},
+  bleu:{label:"Bleu nuit",c:["#2c3e7a","#3a5297","#22306a"],sw:"#2c3e7a"},
+  bordeaux:{label:"Bordeaux",c:["#5d0f24","#741530","#4a0b1c"],sw:"#5d0f24"}
+};
+const OCC=["Toutes","Amour","Anniversaire","Naissance","Merci","Déco"];
+const VASES={verre:"Boîte en verre",blanc:"Vase blanc",noir:"Vase noir",dore:"Vase doré",bois:"Vase en bois"};
+const P=[
+ {id:"amira",name:"Amira",n:1,color:"rouge",vase:"verre",price:490,occ:["Amour","Merci"],badge:"Coup de cœur",desc:"Une seule rose rouge sous cloche de verre. Le cadeau qui dit tout en peu de mots."},
+ {id:"yasmine",name:"Yasmine",n:12,color:"rose",vase:"blanc",price:1290,occ:["Anniversaire","Merci","Naissance"],desc:"Douze roses roses en dôme dans un vase en céramique blanche. Tendre et lumineux."},
+ {id:"lina",name:"Lina",n:20,color:"rouge",vase:"noir",price:1890,occ:["Amour","Anniversaire"],badge:"Best-seller",desc:"Vingt roses rouges profondes dans un vase noir mat. Le grand classique, en version contemporaine."},
+ {id:"rim",name:"Rim",n:20,color:"pastel",vase:"blanc",price:1890,occ:["Naissance","Anniversaire","Merci"],desc:"Un mélange de rose poudré, pêche et lavande. Doux, frais, parfait pour une naissance."},
+ {id:"salma",name:"Salma",n:30,color:"bordeaux",vase:"bois",price:2490,occ:["Amour","Déco"],desc:"Trente roses bordeaux dans un vase en bois naturel. Chaleureux et très élégant."},
+ {id:"ghita",name:"Ghita",n:30,color:"blanc",vase:"noir",price:2490,occ:["Déco","Merci"],desc:"Trente roses ivoire sur vase noir. Un contraste net qui habille une entrée ou un bureau."},
+ {id:"dounia",name:"Dounia",n:12,color:"rose",vase:"dore",price:1390,occ:["Anniversaire","Amour"],desc:"Douze roses roses sur un pied doré. Petite par la taille, grande par l'effet."},
+ {id:"nour",name:"Nour",n:40,color:"blanc",vase:"dore",price:3290,occ:["Déco","Amour"],badge:"Prestige",desc:"Quarante roses blanches sur un vase doré à pied. Notre composition la plus généreuse."},
+ {id:"layla",name:"Layla",n:1,color:"bleu",vase:"verre",price:520,occ:["Merci","Déco"],desc:"Une rose bleu nuit sous verre. Rare, intrigante, inoubliable."}
+];
+const fmt=v=>v.toLocaleString("fr-FR")+" MAD";
+
+function shade(hex,amt){const n=parseInt(hex.slice(1),16);let r=(n>>16)+amt,g=(n>>8&255)+amt,b=(n&255)+amt;r=Math.max(0,Math.min(255,r));g=Math.max(0,Math.min(255,g));b=Math.max(0,Math.min(255,b));return"#"+((r<<16)|(g<<8)|b).toString(16).padStart(6,"0")}
+function rose(x,y,s,c){const d=shade(c,-38),l=shade(c,22);return`<g><circle cx="${x}" cy="${y}" r="${s}" fill="${c}"/><circle cx="${x}" cy="${y}" r="${s*.66}" fill="none" stroke="${d}" stroke-width="${s*.11}" stroke-dasharray="${s*2.6} ${s*.7}" opacity=".7"/><circle cx="${x}" cy="${y}" r="${s*.33}" fill="none" stroke="${d}" stroke-width="${s*.1}" stroke-dasharray="${s*1.2} ${s*.4}" opacity=".8"/><path d="M${x-s*.75} ${y-s*.25} q${s*.3} ${-s*.55} ${s*.85} ${-s*.6}" fill="none" stroke="${l}" stroke-width="${s*.1}" stroke-linecap="round" opacity=".7"/></g>`}
+function art(p){
+  const cols=COLORS[p.color].c;let out="";
+  if(p.vase==="verre"){
+    out+=`<rect x="44" y="214" width="112" height="14" rx="2" fill="#b48a3c"/><rect x="40" y="226" width="120" height="6" rx="2" fill="#8d6a2a"/>`;
+    out+=`<path d="M100 212 V160" stroke="#3d6b4f" stroke-width="5"/><path d="M100 192 q-20 -6 -26 -20 q18 0 26 14" fill="#4f8763"/>`;
+    out+=rose(100,128,34,cols[0]);
+    out+=`<rect x="48" y="62" width="104" height="152" fill="rgba(255,255,255,.14)" stroke="rgba(180,138,60,.9)" stroke-width="2"/><path d="M60 72 v120" stroke="rgba(255,255,255,.55)" stroke-width="4" stroke-linecap="round"/>`;
+    return`<svg viewBox="0 0 200 240" role="img" aria-label="${p.name}">${out}</svg>`;
+  }
+  const R=26+Math.sqrt(p.n)*9.5,cx=100,cy=132,pts=[];
+  for(let i=0;i<p.n;i++){const rr=R*Math.sqrt((i+.5)/p.n)*.86,t=i*2.39996;pts.push([cx+rr*Math.cos(t),cy+rr*Math.sin(t)*.92])}
+  pts.sort((a,b)=>a[1]-b[1]);
+  const s=Math.min(18,R/Math.sqrt(p.n)*1.02);
+  pts.forEach((q,i)=>out+=rose(q[0].toFixed(1),q[1].toFixed(1),s,cols[i%cols.length]));
+  const V={blanc:["#f4f1ec","#d9d3ca"],noir:["#232024","#0e0c0e"],dore:["#d5ad5f","#9c7631"],bois:["#a8794d","#7b5432"]}[p.vase];
+  const top=cy+R*.38;
+  if(p.vase==="dore"){
+    out+=`<path d="M${cx-R*.8} ${top} Q${cx-R*.7} ${top+38} ${cx-10} ${top+44} L${cx-8} ${top+62} L${cx-26} ${top+72} L${cx+26} ${top+72} L${cx+8} ${top+62} L${cx+10} ${top+44} Q${cx+R*.7} ${top+38} ${cx+R*.8} ${top} Z" fill="${V[0]}"/><path d="M${cx-R*.8} ${top} Q${cx-R*.7} ${top+38} ${cx-10} ${top+44} L${cx} ${top+44} L${cx} ${top} Z" fill="${V[1]}" opacity=".35"/>`;
+  }else{
+    const w=R*.82,h=Math.min(240-top-6,64);
+    out+=`<path d="M${cx-w} ${top} C${cx-w-6} ${top+h*.7} ${cx-w*.7} ${top+h} ${cx-w*.5} ${top+h} L${cx+w*.5} ${top+h} C${cx+w*.7} ${top+h} ${cx+w+6} ${top+h*.7} ${cx+w} ${top} Z" fill="${V[0]}"/><path d="M${cx-w} ${top} C${cx-w-6} ${top+h*.7} ${cx-w*.7} ${top+h} ${cx-w*.5} ${top+h} L${cx-w*.2} ${top+h} C${cx-w*.5} ${top+h*.8} ${cx-w*.7} ${top+h*.5} ${cx-w*.65} ${top} Z" fill="${V[1]}" opacity=".45"/>`;
+    if(p.vase==="bois")for(let k=1;k<4;k++)out+=`<path d="M${cx-w*.6+k*w*.3} ${top+4} q6 ${h*.45} 0 ${h-8}" stroke="#6a4529" stroke-width="1.2" fill="none" opacity=".5"/>`;
+  }
+  return`<svg viewBox="0 0 200 240" role="img" aria-label="${p.name}">${out}</svg>`;
+}
+
+/* state */
+let occ="Toutes",col="all",cart=[];
+const $=id=>document.getElementById(id);
+const dateInput=$("date");
+const tomorrow=new Date(Date.now()+864e5).toISOString().slice(0,10);
+dateInput.min=tomorrow;dateInput.value=tomorrow;
+function longDate(v){return new Date(v+"T12:00").toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"})}
+function okMsg(){$("okMsg").textContent="✓ Livraison possible à "+$("city").value+" le "+longDate(dateInput.value)}
+$("city").onchange=okMsg;dateInput.onchange=()=>{if(dateInput.value<tomorrow)dateInput.value=tomorrow;okMsg()};okMsg();
+
+$("heroArt").innerHTML=art({name:"Composition VIVA ROSE",n:30,color:"rouge",vase:"noir"});
+
+function chips(){
+  $("occChips").innerHTML=OCC.map(o=>`<button class="chip" type="button" aria-pressed="${o===occ}" data-o="${o}">${o}</button>`).join("");
+  $("colChips").innerHTML=`<button class="chip" type="button" aria-pressed="${col==="all"}" data-c="all">Toutes les couleurs</button>`+Object.entries(COLORS).map(([k,v])=>`<button class="chip" type="button" aria-pressed="${col===k}" data-c="${k}"><i class="swatch" style="background:${v.sw}"></i>${v.label}</button>`).join("");
+  document.querySelectorAll("[data-o]").forEach(b=>b.onclick=()=>{occ=b.dataset.o;render()});
+  document.querySelectorAll("[data-c]").forEach(b=>b.onclick=()=>{col=b.dataset.c;render()});
+}
+function render(){
+  chips();
+  const list=P.filter(p=>(occ==="Toutes"||p.occ.includes(occ))&&(col==="all"||p.color===col));
+  $("resultCount").textContent=list.length+" composition"+(list.length>1?"s":"");
+  $("grid").innerHTML=list.length?list.map(p=>`<button class="card" type="button" data-id="${p.id}"><div class="pic">${p.badge?`<span class="badge">${p.badge}</span>`:""}${art(p)}</div><div class="info"><div><h3>${p.name}</h3><div class="sub">${p.n} rose${p.n>1?"s":""} · ${VASES[p.vase]}</div></div><span class="price">${fmt(p.price)}</span></div></button>`).join(""):`<div class="empty">Aucune composition ne correspond. Essayez une autre couleur.</div>`;
+  document.querySelectorAll(".card").forEach(c=>c.onclick=()=>openProduct(c.dataset.id));
+}
+
+function show(el){$("scrim").hidden=false;el.hidden=false}
+function closeAll(){$("scrim").hidden=true;$("modal").hidden=true;$("drawer").hidden=true}
+$("scrim").onclick=closeAll;
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeAll()});
+
+function openProduct(id){
+  const p=P.find(x=>x.id===id);let q=1;
+  const m=$("modal");
+  m.innerHTML=`<button class="x" type="button" aria-label="Fermer" id="mx">✕</button><div class="pic">${art(p)}</div><div class="body">
+   <p class="eyebrow">${p.n} rose${p.n>1?"s":""} · ${COLORS[p.color].label} · ${VASES[p.vase]}</p><h2>${p.name}</h2><p class="desc">${p.desc}</p>
+   <div class="price" style="font-size:22px">${fmt(p.price)}</div>
+   <div class="qty"><button type="button" id="qm" aria-label="Moins">−</button><span id="qv">1</span><button type="button" id="qp" aria-label="Plus">+</button></div>
+   <label for="msg" class="eyebrow">Message pour la carte (offert)</label>
+   <textarea id="msg" rows="3" maxlength="160" placeholder="Joyeux anniversaire, avec tout mon amour…"></textarea><div class="count" id="mc">0 / 160</div>
+   <p class="note" style="margin:0">Livraison à ${$("city").value} le ${longDate(dateInput.value)}</p>
+   <button class="btn btn-rose" type="button" id="add">Ajouter au panier</button></div>`;
+  show(m);
+  $("mx").onclick=closeAll;
+  const upd=()=>$("qv").textContent=q;
+  $("qm").onclick=()=>{q=Math.max(1,q-1);upd()};$("qp").onclick=()=>{q=Math.min(10,q+1);upd()};
+  $("msg").oninput=e=>$("mc").textContent=e.target.value.length+" / 160";
+  $("add").onclick=()=>{cart.push({id:p.id,q,msg:$("msg").value.trim()});updCount();closeAll();openCart()};
+}
+function updCount(){$("cartCount").textContent=cart.reduce((a,l)=>a+l.q,0)}
+function openCart(view){
+  const d=$("drawer");
+  const sub=cart.reduce((a,l)=>a+P.find(p=>p.id===l.id).price*l.q,0);
+  const ship=sub===0||sub>=1500?0:50;
+  if(view==="checkout"){
+    d.innerHTML=`<header><h2>Livraison</h2><button class="x" style="position:static" type="button" id="dx" aria-label="Fermer">✕</button></header>
+    <form class="co" id="co"><label for="fn">Nom du destinataire<input id="fn" required></label>
+    <label for="ph">Téléphone du destinataire<input id="ph" type="tel" required placeholder="06 XX XX XX XX"></label>
+    <label for="ad">Adresse<textarea id="ad" rows="2" required></textarea></label>
+    <label for="se">Votre nom (expéditeur)<input id="se" required></label>
+    <p class="note">Livraison à ${$("city").value} le ${longDate(dateInput.value)} · Total ${fmt(sub+ship)}</p>
+    <button class="btn btn-rose" type="submit">Valider la commande</button>
+    <p class="note" id="coMsg"></p></form>`;
+    show(d);$("dx").onclick=closeAll;
+    $("co").onsubmit=e=>{e.preventDefault();$("coMsg").textContent="Maquette : le paiement et l'envoi des commandes seront branchés à la mise en ligne. Rien n'a été envoyé."};
+    return;
+  }
+  d.innerHTML=`<header><h2>Votre panier</h2><button class="x" style="position:static" type="button" id="dx" aria-label="Fermer">✕</button></header>
+  <div class="lines">${cart.length?cart.map((l,i)=>{const p=P.find(x=>x.id===l.id);return`<div class="line"><div class="mini">${art(p)}</div><div style="min-width:0"><b>${p.name}</b> × ${l.q}<small>${l.msg?"« "+l.msg.replace(/</g,"&lt;")+" »":"Sans message"}</small><button type="button" data-rm="${i}">Retirer</button></div><span class="price">${fmt(p.price*l.q)}</span></div>`}).join(""):`<p class="empty" style="margin-top:20px">Votre panier est vide. Choisissez une composition pour commencer.</p>`}</div>
+  ${cart.length?`<div class="totals"><div><span>Sous-total</span><span>${fmt(sub)}</span></div><div><span>Livraison (${$("city").value})</span><span>${ship?fmt(ship):"Offerte"}</span></div><div class="grand"><span>Total</span><span>${fmt(sub+ship)}</span></div>${ship?`<p class="note" style="margin:0">Plus que ${fmt(1500-sub)} pour la livraison offerte.</p>`:""}<button class="btn btn-rose" type="button" id="go">Commander</button></div>`:""}`;
+  show(d);$("dx").onclick=closeAll;
+  d.querySelectorAll("[data-rm]").forEach(b=>b.onclick=()=>{cart.splice(+b.dataset.rm,1);updCount();openCart()});
+  if($("go"))$("go").onclick=()=>openCart("checkout");
+}
+$("openCart").onclick=()=>openCart();
+render();
+</script>
+</body>
+</html>
