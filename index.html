@@ -131,10 +131,13 @@ details p{margin:8px 0 0;color:var(--muted)}
 .lifestyle figcaption p{margin:8px 0 0;opacity:.9;font-weight:300}
 @media (max-width:640px){.lifestyle img{aspect-ratio:4/5}.lifestyle figcaption{position:static;background:var(--stem);color:var(--stem-ink);max-width:none;padding:20px}}
 
-footer{margin-top:80px;background:var(--stem);color:var(--stem-ink);font-size:14px}
-footer .wrap{padding-block:40px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}
-footer h4{font-weight:500;margin:0 0 8px;letter-spacing:.1em;text-transform:uppercase;font-size:12px;opacity:.7}
-footer p{margin:0;opacity:.85}
+footer{margin-top:80px;background:#f3f2f0;color:var(--ink);font-size:15px;border-top:1px solid var(--line)}
+:root[data-theme="dark"] footer{background:var(--surface)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) footer{background:var(--surface)}}
+footer .wrap{padding-block:56px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}
+footer h4{font-weight:600;margin:0 0 12px;letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:var(--gold)}
+footer p{margin:0;line-height:1.9}
+footer a{text-decoration:none}footer a:hover{color:var(--rose)}
 @media (max-width:640px){footer .wrap{grid-template-columns:1fr}}
 
 /* overlays */
