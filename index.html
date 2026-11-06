@@ -15,17 +15,17 @@ img{max-width:100%}
 [hidden]:not([hidden=until-found i]){display:none!important}
 :root{
   --bg:#f7f5f2; --surface:#ffffff; --ink:#1f1a1c; --muted:#6e6467; --line:#e4dedb;
-  --stem:#1e3a2f; --stem-ink:#f4efe9; --rose:#b3123b; --rose-soft:#f6e3e7; --gold:#b48a3c;
+  --stem:#231d1f; --stem-ink:#f4efe9; --rose:#b3123b; --rose-soft:#f6e3e7; --gold:#b48a3c;
   --display:"Jost", "Futura", "Helvetica Neue", Arial, sans-serif;
   --body:"Jost", "Futura", "Helvetica Neue", Arial, sans-serif;
   --r:14px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#141113; --surface:#1d191b; --ink:#f2ecea; --muted:#a69a9d; --line:#332c2f;
-  --stem:#0f241c; --stem-ink:#efe8e1; --rose:#ef5b7e; --rose-soft:#3a1d25; --gold:#d3aa5e; color-scheme:dark}}
+  --stem:#171214; --stem-ink:#efe8e1; --rose:#ef5b7e; --rose-soft:#3a1d25; --gold:#d3aa5e; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#141113; --surface:#1d191b; --ink:#f2ecea; --muted:#a69a9d; --line:#332c2f;
-  --stem:#0f241c; --stem-ink:#efe8e1; --rose:#ef5b7e; --rose-soft:#3a1d25; --gold:#d3aa5e; color-scheme:dark}
+  --stem:#171214; --stem-ink:#efe8e1; --rose:#ef5b7e; --rose-soft:#3a1d25; --gold:#d3aa5e; color-scheme:dark}
 
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;font-weight:400}
@@ -53,7 +53,7 @@ nav.main a:hover{color:var(--rose)}
 .hero{background:var(--stem);color:var(--stem-ink);position:relative;overflow:hidden;isolation:isolate}
 .hero .bg{position:absolute;inset:0;z-index:-2;margin:0}
 .hero .bg img{width:100%;height:100%;object-fit:cover;object-position:70% 72%;display:block}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(18,36,28,.92) 0%,rgba(18,36,28,.78) 38%,rgba(18,36,28,.15) 70%,rgba(18,36,28,0) 100%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(30,23,25,.92) 0%,rgba(30,23,25,.78) 38%,rgba(30,23,25,.15) 70%,rgba(30,23,25,0) 100%)}
 .hero .wrap{display:flex;align-items:center;min-height:min(78vh,680px);padding-block:64px 56px}
 .hero .wrap>div{max-width:560px}
 .hero h1{font-size:clamp(40px,7vw,84px);letter-spacing:-.01em}
@@ -65,15 +65,15 @@ nav.main a:hover{color:var(--rose)}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
 .facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:32px;font-size:13px;opacity:.8}
 .facts strong{display:block;font-family:var(--display);font-size:26px;font-weight:400;opacity:1}
-@media (max-width:760px){.hero .wrap{min-height:0;padding-block:320px 48px;align-items:flex-end}.hero .bg{bottom:auto;height:520px}.hero .bg img{object-position:50% 100%;transform:scale(1.45);transform-origin:45% 88%}.hero::after{background:linear-gradient(180deg,rgba(18,36,28,0) 0px,rgba(18,36,28,0) 200px,rgba(18,36,28,.9) 360px,var(--stem) 520px)}}
+@media (max-width:760px){.hero .wrap{min-height:0;padding-block:320px 48px;align-items:flex-end}.hero .bg{bottom:auto;height:520px}.hero .bg img{object-position:50% 100%;transform:scale(1.45);transform-origin:45% 88%}.hero::after{background:linear-gradient(180deg,rgba(30,23,25,0) 0px,rgba(30,23,25,0) 200px,rgba(30,23,25,.9) 360px,var(--stem) 520px)}}
 
 /* delivery bar */
 .deliver{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);margin-top:-22px;position:relative;display:grid;grid-template-columns:1fr 1fr auto;gap:12px;padding:14px;align-items:end}
 .deliver label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
 select,input,textarea{font:inherit;font-size:15px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;width:100%}
 .deliver .ok{font-size:14px;color:var(--stem);align-self:center}
-:root[data-theme="dark"] .deliver .ok{color:#8fc7a9}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .deliver .ok{color:#8fc7a9}}
+:root[data-theme="dark"] .deliver .ok{color:#f0a3b6}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .deliver .ok{color:#f0a3b6}}
 @media (max-width:640px){.deliver{grid-template-columns:1fr 1fr}.deliver .ok{grid-column:1/-1}}
 
 /* shop */
