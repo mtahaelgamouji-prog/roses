@@ -55,14 +55,15 @@ nav.main a:hover{color:var(--rose)}
 .hero h1{font-size:clamp(40px,7vw,84px);letter-spacing:-.01em}
 .hero h1 em{color:#f0a3b6;font-style:italic}
 .hero p{max-width:46ch;opacity:.86;font-size:18px;font-weight:300;margin:18px 0 26px}
-.hero .art{max-width:380px;justify-self:center;width:100%}
+.hero .art{max-width:440px;justify-self:center;width:100%;margin:0}
+.hero .art img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 78%;border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.35)}
 .btn{border:0;border-radius:999px;padding:13px 24px;font-size:15px;font-weight:500}
 .btn-rose{background:var(--rose);color:#fff}
 .btn-line{background:transparent;color:inherit;border:1px solid currentColor}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
 .facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:32px;font-size:13px;opacity:.8}
 .facts strong{display:block;font-family:var(--display);font-size:26px;font-weight:400;opacity:1}
-@media (max-width:760px){.hero .wrap{grid-template-columns:1fr;padding-block:36px}.hero .art{max-width:260px;order:-1}}
+@media (max-width:760px){.hero .wrap{grid-template-columns:1fr;padding-block:36px}.hero .art{max-width:none}.hero .art img{aspect-ratio:4/3}}
 
 /* delivery bar */
 .deliver{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);margin-top:-22px;position:relative;display:grid;grid-template-columns:1fr 1fr auto;gap:12px;padding:14px;align-items:end}
@@ -186,7 +187,7 @@ form.co label{font-size:13px;color:var(--muted);display:grid;gap:4px}
     <div class="ctas"><a class="btn btn-rose" href="#boutique" style="text-decoration:none">Voir les compositions</a><a class="btn btn-line" href="#savoir-faire" style="text-decoration:none">Comment ça marche</a></div>
     <div class="facts"><div><strong>5 ans</strong>de tenue en moyenne</div><div><strong>100 %</strong>roses naturelles</div><div><strong>J+1</strong>dans 6 villes</div></div>
   </div>
-  <div class="art" id="heroArt"></div>
+  <figure class="art"><img src="img/viva-rose-hero.webp" alt="Compositions de roses rouges éternelles dans des boîtes blanches" width="900" height="1353" fetchpriority="high"></figure>
 </div></div>
 
 <div class="wrap">
@@ -321,7 +322,6 @@ function longDate(v){return new Date(v+"T12:00").toLocaleDateString("fr-FR",{wee
 function okMsg(){$("okMsg").textContent="✓ Livraison possible à "+$("city").value+" le "+longDate(dateInput.value)}
 $("city").onchange=okMsg;dateInput.onchange=()=>{if(dateInput.value<tomorrow)dateInput.value=tomorrow;okMsg()};okMsg();
 
-$("heroArt").innerHTML=art({name:"Composition VIVA ROSE",n:30,color:"rouge",vase:"noir"});
 
 function chips(){
   $("occChips").innerHTML=OCC.map(o=>`<button class="chip" type="button" aria-pressed="${o===occ}" data-o="${o}">${o}</button>`).join("");
